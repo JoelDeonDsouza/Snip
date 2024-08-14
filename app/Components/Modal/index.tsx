@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { MdClose } from 'react-icons/md'
 import Card from '../Card'
+import RepForm from '../RepForm'
 
 interface ModalProps {
    isOpen: boolean
@@ -76,6 +77,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, snipId }) => {
                            ))
                         )}
                </div>
+            </div>
+            {/* Form Container */}
+            <div className="flex-1">
+               <RepForm snipId={snipId} setDataFetched={setDataFetched} />
             </div>
             <button
                onClick={onClose}
